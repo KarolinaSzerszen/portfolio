@@ -8,6 +8,7 @@ import React from "./assets/React.png";
 import tailwind from "./assets/Tailwind_CSS.png";
 import figma from "./assets/Figma.png";
 import FlipCard from "./components/FlipCard";
+import bookshop from "./assets/bookshopImg.png";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,7 +26,7 @@ function App() {
           <div class="wave-top">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
-                fill="#101010"
+                fill="#1d1c1cff"
                 fill-opacity="1"
                 d="M0,192L48,202.7C96,213,192,235,288,229.3C384,224,480,192,576,181.3C672,171,768,181,864,208C960,235,1056,277,1152,266.7C1248,256,1344,192,1392,160L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
               ></path>
@@ -42,7 +43,7 @@ function App() {
           </p>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
-              fill="#101010"
+              fill="#1d1c1cff"
               fill-opacity="1"
               d="M0,320L48,282.7C96,245,192,171,288,122.7C384,75,480,53,576,53.3C672,53,768,75,864,90.7C960,107,1056,117,1152,101.3C1248,85,1344,43,1392,21.3L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
             ></path>
@@ -56,7 +57,7 @@ function App() {
             className="skills-top-wave"
           >
             <path
-              fill="#101010"
+              fill="#1d1c1cff"
               fill-opacity="1"
               d="M0,192L48,165.3C96,139,192,85,288,90.7C384,96,480,160,576,192C672,224,768,224,864,213.3C960,203,1056,181,1152,181.3C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
             ></path>
@@ -89,7 +90,7 @@ function App() {
             className="skills-bottom-wave"
           >
             <path
-              fill="#101010"
+              fill="#1d1c1cff"
               fill-opacity="1"
               d="M0,160L48,165.3C96,171,192,181,288,192C384,203,480,213,576,218.7C672,224,768,224,864,197.3C960,171,1056,117,1152,85.3C1248,53,1344,43,1392,37.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
             ></path>
@@ -102,13 +103,19 @@ function App() {
             className="my-projects-top-wave"
           >
             <path
-              fill="#101010"
+              fill="#1d1c1cff"
               fill-opacity="1"
               d="M0,96L48,80C96,64,192,32,288,42.7C384,53,480,107,576,149.3C672,192,768,224,864,234.7C960,245,1056,235,1152,218.7C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
             ></path>
           </svg>
           <h2>My projects</h2>
-          <div>Latest</div>
+          <div className="projects">
+            <div className="bookshop-project">
+              <div className="bookshop-img">
+                <img src={bookshop} />
+              </div>
+            </div>
+          </div>
           <div>First</div>
         </div>
       </section>
