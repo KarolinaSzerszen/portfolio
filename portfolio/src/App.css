@@ -538,7 +538,9 @@ body {
     gap: 14px;
   }
 
-  .navbar a {
+  .navbar a,
+  .footer,
+  .resume a {
     font-size: 14px;
   }
   .let-be-light {
