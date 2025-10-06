@@ -62,7 +62,7 @@ function App() {
         }
       />
       <section className="hello-section" id="home">
-        <div className={`hello ${!light && "light-font"}`}>
+        <div className={`hello ${light && "light-font"}`}>
           <h1>Karolina Szerszeń</h1>
           <h2>Front-end developer </h2>
         </div>
