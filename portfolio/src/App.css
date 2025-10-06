@@ -8,24 +8,37 @@ body {
   /*background-position: 80% top; moves the image a bit right*/
 }
 
+/*                                                       GREETINGS                                                 */
+
+.main-container {
+  position: relative;
+}
+.hello-section {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .hello {
-  margin-top: 18%;
-  margin-bottom: 30%;
+  margin-top: 8%;
   text-align: center;
   color: beige;
 }
 
 .hello h1 {
-  font-size: 2.6vw;
+  font-size: 46px;
 }
 .hello h2 {
-  font-size: 1.8vw;
+  font-size: 28px;
   color: rgba(207, 145, 255, 1);
 }
+
+/*                                                        ABOUT PART                                 */
+
 .about {
   position: relative;
   width: auto;
-  height: 40vh;
+  height: fit-content;
   background-color: #1d1c1cff;
   color: rgba(207, 145, 255, 1);
   /*padding-top: 100px; */
@@ -37,7 +50,7 @@ body {
 
   padding: 2%;
   padding-bottom: 0%;
-  padding-top: 0;
+
   font-size: 2.4vw;
   margin-top: 0;
 }
@@ -48,22 +61,38 @@ body {
   padding-right: 12%;
   font-size: 1.5vw;
   text-align: justify;
+  margin: 0;
+}
+.wave-top {
+  display: block;
+}
+/*                                                       SKILLS                                             */
+
+.skill-section {
+  position: relative;
+  width: 100%;
+  top: 36%;
 }
 
+.skills-wave {
+  width: 80vw;
+  margin-left: auto;
+}
 .skills {
   position: relative;
-  margin-top: 16%;
   width: 80%;
-  height: 90vh;
+
+  height: fit-content;
   margin-left: auto;
   background-color: #1d1c1cff;
   color: rgba(207, 145, 255, 1);
 }
 
 .skills h2 {
-  padding-left: 14%;
+  padding-left: 20%;
   font-size: 2.4vw;
-  margin-bottom: 6%;
+  margin: 0;
+  margin-left: 10vw;
 }
 .skills h3 {
   font-size: 1.8vw;
@@ -72,54 +101,42 @@ body {
 
 .half-circle {
   position: absolute;
-  right: 50vw; /* stick to left edge */
-  top: 50%; /* center vertically */
+  right: 69vw;
+  top: 45.5%;
   transform: translateY(-45%);
-  width: 50vw; /* width of half-circle */
-  height: 116vh; /* height of half-circle */
+  width: 20vw;
+  height: 59vw;
   background-color: #1d1c1cff;
-  border-top-left-radius: 70%; /* round top-left corner */
-  border-bottom-left-radius: 60%; /* round bottom-left corner */
-  border-top-right-radius: 0; /* keep right corners sharp */
-  border-bottom-right-radius: 0;
-  z-index: -1;
-}
-
-.wave-top {
-  position: absolute;
-  bottom: 82%;
-  width: 100%;
-  z-index: -1;
-}
-
-.skills-top-wave {
-  position: absolute;
-  bottom: 90%;
-  margin-left: auto;
-  z-index: -1;
-}
-.skills-bottom-wave {
-  position: absolute;
-  top: 100%;
-  margin-left: auto;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
   z-index: -1;
 }
 
 .flip-card-container {
   display: flex;
   flex-direction: row;
-  margin-bottom: 6%;
+  margin-left: 8vw;
+  padding-bottom: 8vw;
 }
-
-/*.front-end-img-container {
+.second {
+  margin-left: 40vw;
+}
+.second-text {
+  text-align: end;
+  margin-right: 18vw;
+}
+.front-end-img-container {
   display: flex;
   flex-direction: row;
   gap: 2vw;
-}*/
+}
+
 .flip-card {
-  width: 150px;
-  height: 150px;
-  perspective: 1000px; /* lets us see the 3-D flip */
+  width: 8vw;
+  height: 8vw;
+  perspective: 1000px;
 }
 
 .flip-card-inner {
@@ -127,11 +144,11 @@ body {
   width: 100%;
   height: 100%;
   transition: transform 0.6s;
-  transform-style: preserve-3d; /* allow front & back faces */
+  transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg); /* flip on hover */
+  transform: rotateY(180deg);
 }
 
 .flip-card-front,
@@ -139,7 +156,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* hide the “back” when facing away */
+  backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,32 +173,165 @@ body {
 
 /* BACK (text) */
 .flip-card-back {
-  background-color: rebeccapurple; /* purple back */
+  background-color: rgb(121, 63, 179);
   color: white;
-  font-size: 1.2rem;
-  transform: rotateY(180deg); /* start flipped so it shows when rotated */
+  text-align: center;
+  font-size: 1.8rem;
+  transform: rotateY(180deg);
 }
-
-.my-projects {
-  position: relative;
-  margin-top: 30%;
-  background-color: #1d1c1cff;
-  height: 200vh;
+.additional-space {
+  height: 50vw;
 }
+/*                                      MY PROJECTS                                        */
 
-.my-projects h2 {
-  position: absolute;
-  top: -8%;
-
-  color: rgba(207, 145, 255, 1);
+.project-section {
+  height: fit-content;
+}
+.projects-section h2 {
+  margin: 0;
+  margin-bottom: 4vh;
   font-size: 2.4vw;
-  margin-left: 12%;
-  margin-top: 0%;
+  color: rgba(207, 145, 255, 1);
+  text-align: center;
+  background-color: #1d1c1cff;
+}
+.projects-wrapper {
+  background-color: #1d1c1cff;
+  display: flex;
+  flex-direction: column;
+  padding-left: 12%;
+  padding-right: 12%;
+  gap: 4vh;
+
+  padding-top: 0;
+}
+.project {
+  display: flex;
+  flex-direction: row;
+  gap: 6vh;
+  height: 20vw;
+  justify-content: center;
+  align-items: center;
 }
 
-.my-projects-top-wave {
-  position: absolute;
-  bottom: 96%;
+section svg {
+  display: block;
+  margin: 0;
+}
+.project-img {
+  position: relative;
+  width: 48%;
+  height: 100%;
+  /*overflow: hidden;*/
+}
+.project-content {
+  width: 52%;
+  height: 100%;
+}
+/*.project-img {
+  background-color: aquamarine;
+}
+.project-content {
+  background-color: aliceblue;
+}*/
 
-  z-index: -1;
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4%;
+}
+
+.project-content h3,
+.project-dropdown h3 {
+  font-size: 2vw;
+  color: rgb(214, 214, 212);
+}
+.project-content p,
+.project-dropdown p,
+.project-dropdown li {
+  font-size: 1.5vw;
+  color: rgb(182, 181, 181);
+}
+.project-link {
+  position: absolute;
+  top: 0%;
+  background-color: rgba(36, 9, 61, 0.7);
+  width: 100%;
+  height: 20vw;
+  border-radius: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-img:hover .project-link {
+  opacity: 1;
+}
+
+.link {
+  color: beige;
+  font-size: 1.4rem;
+  text-decoration: none;
+  border: solid beige 1px;
+  padding: 2%;
+  border-radius: 8%;
+  transition: font-size 0.3s ease;
+  transition: padding 0.3s ease;
+}
+
+.link:hover {
+  font-size: 1.5rem;
+  padding: 2.2%;
+}
+
+/*                                    PROJECT DPRODOWN                         */
+.whole-project {
+  height: fit-content;
+}
+.project-dropdown {
+  margin-top: 6vh;
+  height: fit-content;
+  transition: display 0.3s ease;
+}
+
+.description-button {
+  background-color: rgba(207, 145, 255, 1);
+  padding: 0.8vw 1.8vw;
+  font-size: 20px;
+  border-radius: 6px;
+  -webkit-box-shadow: 2px 8px 15px -4px rgb(49, 17, 53);
+  -moz-box-shadow: 2px 8px 15px -4px rgb(49, 17, 53);
+  box-shadow: 2px 8px 15px -4px rgb(49, 17, 53);
+}
+
+.project-dropdown h3 {
+  text-align: start;
+}
+
+.project-content div {
+  display: flex;
+  flex-direction: row;
+  gap: 4vw;
+  align-items: center;
+}
+.project-content img {
+  width: 35px;
+}
+.project-content a {
+  height: 35px;
+}
+
+section svg {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+svg {
+  width: 100%;
+  height: auto;
 }
