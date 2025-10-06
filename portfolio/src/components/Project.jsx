@@ -49,9 +49,9 @@ function Project({
           <h3>{name}</h3>
           <p>{desc}</p>
           <div>
-            <span className="description-button" onClick={handleClick}>
+            <button className="description-button" onClick={handleClick}>
               {click ? "Show less" : "Read more"}
-            </span>
+            </button>
 
             <a href={githubUrl} target="_blank">
               <img src={github} alt="github icon" />
