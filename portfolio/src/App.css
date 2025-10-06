@@ -479,6 +479,11 @@ body {
   .contact-section form {
     margin: 0 8%;
   }
+  .let-be-light {
+    top: 90%;
+    left: 90%;
+    width: 50px;
+  }
 }
 @media (max-width: 740px) {
   .project {
@@ -530,10 +535,16 @@ body {
     font-size: 18px;
   }
   .navbar {
-    gap: 20px;
+    gap: 14px;
   }
 
   .navbar a {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  .let-be-light {
+    top: 90%;
+    left: 86%;
+    width: 36px;
+    z-index: 30;
   }
 }
