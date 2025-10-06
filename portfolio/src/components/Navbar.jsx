@@ -1,6 +1,6 @@
-function Navbar() {
+function Navbar(props) {
   return (
-    <div className="navbar">
+    <div className={`navbar ${props.isLight && "light"}`}>
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Tech stack</a>

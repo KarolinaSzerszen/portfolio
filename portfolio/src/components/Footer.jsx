@@ -3,14 +3,14 @@ import resumeENG from "../assets/resume/SzerszenKarolina_ENG.pdf";
 import { useState } from "react";
 import Credits from "./Credits";
 
-function Footer() {
+function Footer(props) {
   const [click, setClick] = useState(false);
 
   return (
     <div>
-      {click && <Credits />}
-      <div className="footer">
-        <div className="resume">
+      {click && <Credits isLight={props.isLight} />}
+      <div className={`footer ${props.isLight && "light"}`}>
+        <div className={`resume ${props.isLight && "light"}`}>
           <a href={resumePL} download>
             Resume-PL
           </a>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import github from "../assets/github.png";
-import connection from "../assets/hyperlink.png";
+import connection from "../assets/link.png";
+import linkWhite from "../assets/linkWhite.png";
 
 function Project({
   img,
@@ -11,6 +12,7 @@ function Project({
   fullDesc,
   features,
   githubUrl,
+  isLight,
 }) {
   const [click, setClick] = useState(false);
 
@@ -45,7 +47,7 @@ function Project({
             </a>
           </div>
         </div>
-        <div className="project-content">
+        <div className={`project-content ${isLight && "light-font"}`}>
           <h3>{name}</h3>
           <p>{desc}</p>
           <div>
@@ -57,13 +59,13 @@ function Project({
               <img src={github} alt="github icon" />
             </a>
             <a href={url} target="_blank">
-              <img src={connection} alt="web link" />
+              <img src={isLight ? connection : linkWhite} alt="web link" />
             </a>
           </div>
         </div>
       </div>
       {click && (
-        <div className="project-dropdown">
+        <div className={`project-dropdown ${isLight && "light-font"}`}>
           <h3>Technology Stack</h3>
           <p>{stack}</p>
           <h3>Description</h3>

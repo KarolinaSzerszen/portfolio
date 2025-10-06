@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
+//icons
 import css_img from "./assets/skills/CSS3.png";
 import html_img from "./assets/skills/HTML5.png";
 import JS from "./assets/skills/JavaScript.png";
@@ -10,34 +11,66 @@ import figma from "./assets/skills/Figma.png";
 import ejsIcon from "./assets/skills/ejsIcon.png";
 import nodeJs from "./assets/skills/nodeJsIcon.png";
 import express from "./assets/skills/expressIcon.png";
+import expressDark from "./assets/skills/expIconBlack.png";
 import FlipCard from "./components/FlipCard";
 import bookshopDiff from "./assets/projects/bookshop.png";
 import herbrarium from "./assets/projects/herbrarium_diff.png";
-import Project from "./components/Project";
-import waveSkillsTop from "./assets/waves/waveSkillsTop.png";
-import waveSkillsBottom from "./assets/waves/waveSkillsBottom.png";
-import waveAboutTop from "./assets/waves/waveAboutTop.png";
-import waveAboutBottom from "./assets/waves/waveAboutBottom.png";
-import waveProject from "./assets/waves/waveProjects.png";
+
+//waves
+//  dark
+import waveSkillsTop from "./assets/waves/dark/waveSkillsTop.png";
+import waveSkillsBottom from "./assets/waves/dark/waveSkillsBottom.png";
+import waveAboutTop from "./assets/waves/dark/waveAboutTop.png";
+import waveAboutBottom from "./assets/waves/dark/waveAboutBottom.png";
+import waveProject from "./assets/waves/dark/waveProjects.png";
+//  light
+import wAboutTL from "./assets/waves/light/wAboutTL.png";
+import wAboutBL from "./assets/waves/light/wAboutBL.png";
+import wSkillsTL from "./assets/waves/light/wSkillsTL.png";
+import wSkillsBL from "./assets/waves/light/wSkillsBL.png";
+import wProjectsL from "./assets/waves/light/wProjectsL.png";
+//let there be light
+import isLight from "./assets/lightbulbLight.png";
+import isDark from "./assets/lightbulbDark.png";
+
+//components
 import ContactMe from "./components/ContactMe";
+import Project from "./components/Project";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
+  const [light, setLight] = useState(true);
+
   return (
     <div className="main-container">
+      <Navbar isLight={light} />
       <div className="img"></div>
-
+      <img
+        src={light ? isLight : isDark}
+        className="let-be-light"
+        onClick={() => {
+          setLight((prev) => !prev);
+          document.body.style.backgroundImage = light
+            ? "url(/src/assets/bg_img_1a.png)"
+            : "url(/src/assets/bg_img_light.png)";
+        }}
+        alt={
+          light ? "a lit lightbulb icon" : "a white outline of a lit lightbulb"
+        }
+      />
       <section className="hello-section" id="home">
-        <div className="hello">
+        <div className={`hello ${light && "light-font"}`}>
           <h1>Karolina Szerszeń</h1>
           <h2>Front-end developer </h2>
         </div>
       </section>
       <section className="about-section" id="about">
-        <img src={waveAboutTop} />
-        <div className="about">
+        <img src={light ? wAboutTL : waveAboutTop} />
+        <div className={`about ${light && "light"}`}>
           <h2>About me</h2>
           <p>
-            Hello! I’m Karolina Szerszeń, a 20 years old junior front-end
+            Hello! I’m Karolina Szerszeń, a 20 year old junior front-end
             developer with a passion for creating clean and interactive
             websites. I enjoy working with HTML, CSS, and JavaScript, and I’m
             currently diving deeper into React and responsive web design. I've
@@ -46,11 +79,11 @@ function App() {
             best practices to improve my skills.
           </p>
         </div>
-        <img src={waveAboutBottom} />
+        <img src={light ? wAboutBL : waveAboutBottom} />
       </section>
       <section className="skill-section" id="skills">
-        <img src={waveSkillsTop} className="skills-wave" />
-        <div className="skills">
+        <img src={light ? wSkillsTL : waveSkillsTop} className="skills-wave" />
+        <div className={`skills ${light && "light"}`}>
           <h2>Technology stack</h2>
           <h3 className="second-text">Front-end</h3>
           <div className="flip-card-container second">
@@ -68,15 +101,22 @@ function App() {
           <div className="flip-card-container second">
             <FlipCard img={ejsIcon} alt="EJS icon" name="EJS" />
             <FlipCard img={nodeJs} alt="Node.js icon" name="Node.js" />
-            <FlipCard img={express} alt="Express icon" name="Express" />
+            <FlipCard
+              img={light ? expressDark : express}
+              alt="Express icon"
+              name="Express"
+            />
           </div>
         </div>
-        <img src={waveSkillsBottom} className="skills-wave" />
+        <img
+          src={light ? wSkillsBL : waveSkillsBottom}
+          className="skills-wave"
+        />
       </section>
 
       <section className="projects-section" id="projects">
-        <img src={waveProject} className="project-wave" />
-        <div className="projects-wrapper">
+        <img src={light ? wProjectsL : waveProject} className="project-wave" />
+        <div className={`projects-wrapper ${light && "light"}`}>
           <h2>My projects</h2>
           <Project
             img={bookshopDiff}
@@ -87,6 +127,7 @@ function App() {
             fullDesc="This website is built using React, Vite, Tailwind CSS, and ESlint. It fetches books from an API to display new releases, popular titles and books filtered by ganre. Users are able to view detailed book information, explore other works by the same author, and see similar books recommended by the API. The shop features a shopping cart where users can add books, adjust quatities, and see a running total. A live search allows users to find books by title, with debounced API requests and interactive dropdown results. The interface is responsive, and interactive, providing a smooth and user-friendly experience."
             features="Displays new and popular books, Filters books by genre,Implements skeleton loading state to boost user experience while loading books, Shows detailed information for each book, Sugests books by the same author, Suggests similar books, Lets users add books to a shopping cart, Allows changing quatities in the cart, Calculates the total price in te cart, Provides live search by book title, Hides search results when clicking outside, Responsive and interactive UI with React and Tailwind"
             githubUrl="https://github.com/KarolinaSzerszen/book-shop"
+            isLight={light}
           />
           <div className="project-dropdown"></div>
           <Project
@@ -98,12 +139,14 @@ function App() {
             fullDesc="Herbrarium is an website built using Node,js, Express.js and EJS for server-side rendering. It features a plant based database accesed via API displaying images and information for both edible and non-edible plants. The site includes a news feed with plant related articles, as well as a user generated article system with image uploads and a commenting feature, fostering community engagement. The design emphasizes a natural aesthetic with greens, and cream tones, and is fully responsive across devices. Express.js handles routing and server logic, dynamically passing API and user content to EJS templates for seamless rendering."
             features="Plant Database (via API) with posibility to browse plants by category, A blog like feed where users can read plant related news and articles, Users can publish their own plant related articles, Visitors can leave comments below every article, The site is fully responside for all type of devices"
             githubUrl="https://github.com/KarolinaSzerszen/Herbrarium"
+            isLight={light}
           />
         </div>
       </section>
-      <section className="contact-section" id="contact">
+      <section className={`contact-section ${light && "light"}`} id="contact">
         <ContactMe />
       </section>
+      <Footer isLight={light} />
     </div>
   );
 }

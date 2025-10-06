@@ -6,6 +6,7 @@ body {
   padding: 0;
   margin: 0;
   /*background-position: 80% top; moves the image a bit right*/
+  transition: background-image 0.3s ease;
 }
 
 /*                                                       GREETINGS                                                 */
@@ -29,7 +30,7 @@ body {
 }
 .hello h2 {
   font-size: 28px;
-  color: rgba(207, 145, 255, 1);
+  color: rgb(194, 120, 250);
 }
 
 /*                                                        ABOUT PART                                 */
@@ -42,7 +43,7 @@ body {
   flex-direction: column;
   gap: 0;
 
-  color: rgba(207, 145, 255, 1);
+  color: rgb(194, 120, 250);
   /*padding-top: 100px; */
 }
 .about {
@@ -83,13 +84,13 @@ body {
   height: fit-content;
   margin-left: auto;
   background-color: #1d1c1cff;
-  color: rgba(207, 145, 255, 1);
+  color: rgb(194, 120, 250);
 }
 
 .skills h2 {
   text-align: center;
   font-size: 40px;
-  color: rgba(207, 145, 255, 1);
+  color: rgb(194, 120, 250);
   margin-bottom: 120px;
 }
 .second-text {
@@ -99,7 +100,6 @@ body {
 .skills h3 {
   margin: 0 12%;
   font-size: 32px;
-  color: rgb(214, 214, 212);
   color: rgb(214, 214, 212);
 }
 
@@ -158,7 +158,7 @@ body {
 
 /* BACK (text) */
 .flip-card-back {
-  background-color: rgb(121, 63, 179);
+  background-color: rgb(194, 120, 250);
   color: white;
   text-align: center;
   font-size: 26px;
@@ -177,7 +177,7 @@ body {
   margin: 0;
   margin-bottom: 40px;
   font-size: 40px;
-  color: rgba(207, 145, 255, 1);
+  color: rgb(194, 120, 250);
   text-align: center;
 }
 .projects-wrapper {
@@ -233,7 +233,7 @@ body {
 .project-link {
   position: absolute;
   top: 0%;
-  background-color: rgba(36, 9, 61, 0.7);
+  background-color: rgba(82, 23, 138, 0.7);
   width: 100%;
   height: 100%;
   border-radius: 12px;
@@ -324,7 +324,7 @@ body {
   font-size: 40px;
   text-align: center;
   margin-bottom: 30px;
-  color: rgba(207, 145, 255, 1);
+  color: rgb(194, 120, 250);
 }
 
 .contact-section form {
@@ -389,7 +389,7 @@ body {
 
 .navbar a:hover,
 .credits:hover {
-  color: rgba(207, 145, 255, 1);
+  color: rgb(194, 120, 250);
 }
 
 /*                                                FOOTER                                         */
@@ -408,6 +408,9 @@ body {
 }
 .credits-container a {
   text-decoration: none;
+  color: white;
+}
+.credits-container div {
   color: white;
 }
 .footer {
@@ -433,7 +436,40 @@ body {
   color: white;
 }
 .resume a:hover {
-  color: rgba(207, 145, 255, 1);
+  color: rgb(194, 120, 250);
+}
+/*                                                 LET THERE BE LIGHT                                   */
+.let-be-light {
+  position: fixed;
+  top: 90%;
+  left: 96%;
+  width: 50px;
+  z-index: 30;
+}
+.light {
+  background-color: #f1f1f1;
+}
+.light-font,
+.light p,
+.light h3,
+.light-font h3,
+.light-font h3,
+.light-font p,
+.light-font li,
+.light label,
+.credits-container,
+.light span,
+.light a,
+.light div {
+  color: black;
+}
+
+.light form {
+  background-color: rgb(233, 227, 238);
+}
+
+.project-link a {
+  color: white;
 }
 
 @media (max-width: 1170px) {
@@ -498,6 +534,6 @@ body {
   }
 
   .navbar a {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
