@@ -448,4 +448,31 @@ body {
     width: 14vw;
     height: 14vw;
   }
+  .about h2,
+  .skills h2,
+  .projects-section h2,
+  .contact-section h2 {
+    font-size: 30px;
+  }
+  .about p {
+    font-size: 20px;
+  }
+  .skills h3,
+  .project-content h3,
+  .project-dropdown h3 {
+    font-size: 28px;
+  }
+
+  .project-content p,
+  .project-dropdown p,
+  .project-dropdown li,
+  .contact-section label {
+    font-size: 20px;
+  }
+  .description-button,
+  .form-button {
+    width: 140px;
+    height: 40px;
+    font-size: 18px;
+  }
 }
