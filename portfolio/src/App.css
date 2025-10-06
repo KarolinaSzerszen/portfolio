@@ -540,7 +540,8 @@ body {
 
   .navbar a,
   .footer,
-  .resume a {
+  .resume a,
+  .credits-container {
     font-size: 14px;
   }
   .let-be-light {
