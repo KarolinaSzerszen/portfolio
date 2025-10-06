@@ -32,6 +32,8 @@ import wProjectsL from "./assets/waves/light/wProjectsL.png";
 //let there be light
 import isLight from "./assets/lightbulbLight.png";
 import isDark from "./assets/lightbulbDark.png";
+import darkBg from "./assets/bg_img_1a.png";
+import lightBg from "./assets/bg_img_light.png";
 
 //components
 import ContactMe from "./components/ContactMe";
@@ -51,16 +53,16 @@ function App() {
         className="let-be-light"
         onClick={() => {
           setLight((prev) => !prev);
-          document.body.style.backgroundImage = light
-            ? "url(/src/assets/bg_img_1a.png)"
-            : "url(/src/assets/bg_img_light.png)";
+          document.body.style.backgroundImage = `url(${
+            light ? darkBg : lightBg
+          })`;
         }}
         alt={
           light ? "a lit lightbulb icon" : "a white outline of a lit lightbulb"
         }
       />
       <section className="hello-section" id="home">
-        <div className={`hello ${light && "light-font"}`}>
+        <div className={`hello ${!light && "light-font"}`}>
           <h1>Karolina Szerszeń</h1>
           <h2>Front-end developer </h2>
         </div>
