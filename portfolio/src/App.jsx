@@ -42,7 +42,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
-  const [light, setLight] = useState(true);
+  const [light, setLight] = useState(false);
 
   return (
     <div className="main-container">
