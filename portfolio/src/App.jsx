@@ -7,8 +7,10 @@ import JS from "./assets/skills/JavaScript.png";
 import React from "./assets/skills/React.png";
 import tailwind from "./assets/skills/Tailwind_CSS.png";
 import figma from "./assets/skills/Figma.png";
+import ejsIcon from "./assets/skills/ejsIcon.png";
+import nodeJs from "./assets/skills/nodeJsIcon.png";
+import express from "./assets/skills/expressIcon.png";
 import FlipCard from "./components/FlipCard";
-
 import bookshopDiff from "./assets/projects/bookshop.png";
 import herbrarium from "./assets/projects/herbrarium_diff.png";
 import Project from "./components/Project";
@@ -35,12 +37,13 @@ function App() {
         <div className="about">
           <h2>About me</h2>
           <p>
-            Hello! I’m Karolina Szerszeń, a junior front-end developer with a
-            passion for creating clean and interactive websites. I enjoy working
-            with HTML, CSS, and JavaScript, and I’m currently diving deeper into
-            React and responsive web design. I love transforming creative ideas
-            into reality. I’m constantly learning new technologies and best
-            practices to improve my skills.
+            Hello! I’m Karolina Szerszeń, a 20 years old junior front-end
+            developer with a passion for creating clean and interactive
+            websites. I enjoy working with HTML, CSS, and JavaScript, and I’m
+            currently diving deeper into React and responsive web design. I've
+            also worked with Node.js and Express I love transforming creative
+            ideas into reality. I’m constantly learning new technologies and
+            best practices to improve my skills.
           </p>
         </div>
         <img src={waveAboutBottom} />
@@ -51,15 +54,21 @@ function App() {
           <h2>Technology stack</h2>
           <h3 className="second-text">Front-end</h3>
           <div className="flip-card-container second">
-            <FlipCard img={css_img} alt="CSS icon" name="CSS" />
             <FlipCard img={html_img} alt="HTML icon" name="HTML" />
             <FlipCard img={JS} alt="JavaScript icon" name="JavaScript" />
             <FlipCard img={React} alt="React icon" name="React" />
           </div>
           <h3>Styling & UI</h3>
           <div className="flip-card-container ">
+            <FlipCard img={css_img} alt="CSS icon" name="CSS" />
             <FlipCard img={tailwind} alt="tailwind icon" name="Tailwind CSS" />
             <FlipCard img={figma} alt="Figma icon" name="Figma" />
+          </div>
+          <h3 className="second-text">Backend</h3>
+          <div className="flip-card-container second">
+            <FlipCard img={ejsIcon} alt="EJS icon" name="EJS" />
+            <FlipCard img={nodeJs} alt="Node.js icon" name="Node.js" />
+            <FlipCard img={express} alt="Express icon" name="Express" />
           </div>
         </div>
         <img src={waveSkillsBottom} className="skills-wave" />
