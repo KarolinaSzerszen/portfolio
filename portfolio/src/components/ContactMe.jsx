@@ -5,6 +5,7 @@ function ContactMe() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,12 +25,17 @@ function ContactMe() {
       .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         console.log("Email sent successfully!", response);
+        setStatusMessage("Your message was sent successfuly!");
         setName("");
         setEmail("");
         setMessage("");
+
+        setTimeout(() => setStatusMessage(""), 3000);
       })
       .catch((error) => {
         console.error("Error sending email:", error);
+        setStatusMessage("Oops! Something went wrong. Please try again.");
+        setTimeout(() => setStatusMessage(""), 3000);
       });
   };
   return (
@@ -69,6 +75,9 @@ function ContactMe() {
         <button className="form-button" type="submit">
           Send
         </button>
+        {statusMessage && (
+          <div className="status-message">{statusMessage} </div>
+        )}
       </form>
     </div>
   );

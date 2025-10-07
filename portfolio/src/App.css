@@ -363,7 +363,10 @@ body {
   height: 54px;
   border-bottom: 3px solid rgb(82, 58, 100);
 }
-
+.status-message {
+  font-size: 20px;
+  color: white;
+}
 /*                                          NAVBAR                                   */
 
 .navbar {
@@ -549,5 +552,8 @@ body {
     left: 86%;
     width: 36px;
     z-index: 30;
+  }
+  .status-message {
+    font-size: 18px;
   }
 }
