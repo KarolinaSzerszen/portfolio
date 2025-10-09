@@ -283,6 +283,9 @@ body {
 
 .description-button,
 .form-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: white;
   width: 160px;
   height: 50px;
