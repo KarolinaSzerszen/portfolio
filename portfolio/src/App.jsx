@@ -40,12 +40,14 @@ import ContactMe from "./components/ContactMe";
 import Project from "./components/Project";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   const [light, setLight] = useState(false);
 
   return (
     <div className="main-container">
+      <Analytics />
       <Navbar isLight={light} />
       <div className="img"></div>
       <img
